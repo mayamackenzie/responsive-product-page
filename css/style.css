@@ -1,33 +1,104 @@
+
 :root {
-
-}
-
-* {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+  
+  }
+  
+  p {
+    font-size: var(--font-size-base);
+  }
+  
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-lg);
+  }
+  
+  h3 {
+    font-size: var(--font-size-md);
+  }
+  
+  
+  @media (max-width: 38em) {
+  
+    .intro-grid {
+     justify-content: space-between;
+     columns: 2;
+    }
+  }
+  
+  @media (max-width: 60em) {
+   .intro-grid {
+    justify-content: space-between;
+    columns: 4;
+    }
+  }
+  
+  * {
     box-sizing: border-box;
-}
-
-html {
-  font-family:'Poppins', sans-serif;
-  background-color: #fff;
-  color: #222;
-  scroll-behavior: smooth;
-  line-height: 1.4;
-}
-
-body {
-  margin: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-
+  }
+  
+  *,
+  *::before,
+  *::after {
+      box-sizing: border-box;
+  }
+  
+  html {
+    font-family:'Poppins', sans-serif;
+    background-color: #fff;
+    font-size: 16px;
+    color: #222;
+    scroll-behavior: smooth;
+    line-height: 1.4;
+  }
+  
+  body {
+    max-width: 100%; /*maybe change*/
+    
+    align-content: center;
+  }
+  
+  
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    padding-top: 50px;
+  }
+  
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 100px; 
+  }
+  
+  
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  
+  .intro-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  }
+  
+  
+  
+  
 
