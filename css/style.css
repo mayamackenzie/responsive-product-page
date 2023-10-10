@@ -9,38 +9,91 @@
   --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
   
   }
-  
+
+p {
+  font-size: var(--font-size-base);
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+h3 {
+  font-size: var(--font-size-md);
+}
+
+
+/* not complete yet, not sure which sizes i should be making fonts or if its 
+just by eye, or if i copy base font var(s) above */
+
+/* 400 px */
+@media (min-width: 25em) {
   p {
-    font-size: var(--font-size-base);
+    font-size: var();
   }
   
   h1 {
-    font-size: var(--font-size-xl);
+    font-size: var();
+  }
+  
+}
+
+
+/* 768   */
+@media (min-width: 48em) {
+  p {
+    font-size: var();
+  }
+  
+  h1 {
+    font-size: var();
   }
   
   h2 {
-    font-size: var(--font-size-lg);
+    font-size: var();
   }
   
   h3 {
-    font-size: var(--font-size-md);
+    font-size: var();
+  }
+}
+
+/* 960  */
+@media (min-width: 60em) {
+  p {
+    font-size: var()
   }
   
-  
-  @media (max-width: 38em) {
-  
-    .intro-grid {
-     justify-content: space-between;
-     columns: 2;
-    }
+  h1 {
+    font-size: var()
   }
   
-  @media (max-width: 60em) {
-   .intro-grid {
-    justify-content: space-between;
-    columns: 4;
-    }
+  h2 {
+    font-size: var();
   }
+  
+  h3 {
+    font-size: var() 
+  }
+}
+
+/* widescreen 1024 */
+@media (min-width: 64em) {
+  p {
+    font-size: var();
+  }
+  
+  h1 {
+    font-size: var();
+  }
+  
+}
+
+
   
   * {
     box-sizing: border-box;
@@ -59,27 +112,34 @@
     color: #222;
     scroll-behavior: smooth;
     line-height: 1.4;
-  }
-  
-  body {
-    max-width: 100%; /*maybe change*/
-    
     align-content: center;
   }
   
+  body {
+    margin: 40px;
+    max-width: 1024px;
+  }
+
+  #main {
+    align-content: center;
+    align-items: center;
+  }
   
   
   .header-container {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 100px;
-    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    max-width: 1200px;
   }
+
   
   
-  nav ul li {
+  nav li {
     display: inline-block;
-    margin-right: 100px; 
+    justify-content: space-between;
+    margin-right: 20px;
   }
   
   
@@ -88,17 +148,81 @@
     max-width: 100%;
   }
   
+.intro-grid {
+  padding-top: 5px;
+  display: grid;
+  grid-template-areas: 
+    "item1 item1 item1"
+    "item2 item3 item4";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
   
-  .intro-grid {
+}
+
+#shot-1 {
+  grid-area: item1;
+}
+
+#shot-2 {
+  grid-area: item2;
+}
+
+#shot-3 {
+  grid-area: item3;
+}
+
+#shot-4 {
+  grid-area: item4;
+}
+
+
+
+
+.valentines {
+  padding-bottom: 60px;
+}
+
+.valentines #h1 {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
+  flex-direction: column;
+}
+
+#limited-edition {
+  margin-top: -30px;
+  font-weight: bold;
+}
+
+
+
+.scoop-container {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 360px;
+    background-color: aquamarine;
+  }
+
+  #the-scoop div {
+    display: flex;
+    gap: 1em;
+    padding-left: 2em;
+    padding-bottom: 4em;
+    padding-right: 
   }
   
   
-  
-  
+  .btn {
+    background-color:black;
+    border-radius: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top:10px;
+    color: #fff;
+    text-decoration: none;
+  }
 
+  
+  .btn:hover {
+    background-color: red;
+    border-radius: 0;
+  }
