@@ -26,10 +26,6 @@ h3 {
   font-size: var(--font-size-md);
 }
 
-
-
-
-
   
   * {
     box-sizing: border-box;
@@ -52,139 +48,193 @@ h3 {
   }
   
   body {
-    margin: 10px;
-    max-width: 100%;
-  }
-
-  #main {
-    max-width: 100%;
-    align-content: center;
-    align-items: center;
+    margin: 0;
   }
   
+  header {
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+header div img {
+  width: 100px;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#valentine-text {
+  background-color: #fff;
+  padding: 1em;
+}
+
   
   .header-container {
-    display: flex;
+    display: flex; 
     justify-content: space-between;
     padding-bottom: 40px;
     padding-top: 40px;
-    max-width: 1200px;
+    max-width: 1200px; 
+  background-color: #fff; 
   }
+  
+  
+ nav ul {
+  display: flex;
+  list-style-type: none;
+}
 
-  
-  
-  nav li {
-    display: inline-block;
-    justify-content: space-between;
-    margin-right: 20px;
-  }
-  
+nav ul li {
+  padding-left: 1em;
+  text-transform: uppercase;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: black;
+    text-decoration: none;
+}
   
   img {
     display: block;
     max-width: 100%;
   }
-  
-.intro-grid {
-  padding-top: 5px;
-  display: grid;
-  grid-template-areas: 
-    "item1 item1 item1"
-    "item2 item3 item4";
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em;
-  
+
+ .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
 }
+  
 
 #shot-1 {
-  grid-area: item1;
+  grid-column: span 3;
 }
 
-#shot-2 {
-  grid-area: item2;
+#product-imgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
 }
 
-#shot-3 {
-  grid-area: item3;
-}
-
-#shot-4 {
-  grid-area: item4;
-}
-
-
-
-
-
-.valentines {
-  padding-bottom: 60px;
-}
-
-.valentines #h1 {
-  display: flex;
-  flex-direction: column;
-}
-
-#limited-edition {
-  margin-top: -30px;
-  font-weight: bold;
-}
-
-
-
-.scoop-container {
-    width: 100%;
-    max-width: 1200px;
-    min-width: 360px;
-    background-color: aquamarine;
-  }
-
-#scoop-title {
-  padding-left: 40%;
-
-}
-
-.review-container {
+#product-imgs img {
   width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.products-container {
   max-width: 1200px;
-  min-width: 360px;
+  margin: 0 auto;
+}
+
+
+#red-vel-desc {
+  margin: 0;
+}
+
+.wrapper valentines {
   background-color: white;
 }
 
+.valentines h1 {
+  margin-bottom: 0;
+}
 
-.products {
+#limited-edition {
+   margin: 0;
+  font-weight:bold;
+  text-transform: uppercase;
+}
+
+#the-scoop {
+  background-color: #fff;
+  padding: 1em;
+}
+
+.scoop-container {
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; 
+  min-width: 360px;
+  }
+
+#scoop-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+h2 {
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 360px;
+}
+
+#dough-boys {
+  background-color: black;
+  padding: 1em;
+  color: white;
+}
+
+.wrapper dough-text{
+  background-color: black;
+}
+
+.dough-grid {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap:wrap;
-  background-color: pink;
+
 }
 
-#item1 {
-  width: 350px;
+.reviews-container { 
+  background-color: black;
+  padding: 1em;
+  color: white;
 }
 
-#item2 {
-  width: 350px;
+#products {
+  background-color: #fff;
+  padding: 1em;
 }
 
-#item3 {
-  width: 350px;
+.dough-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  
 }
 
-#item4 {
-  width: 350px;
+.dough-grid article {
+  background-color: rgb(245, 244, 244);
+  text-align: center;
+  border-radius: 10px;
+}
+
+article img {
+  border-radius: 10px 10px 0 0;
+}
+
+#main-text {
+
+  margin: 0;
 }
 
   .btn {
-    background-color:black;
-    border-radius: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-top:10px;
-    color: #fff;
-    text-decoration: none;
+   padding: .8em 1em;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: var(--font-size-sm);
   }
 
   
@@ -193,29 +243,60 @@ h3 {
     border-radius: 0;
   }
 
+  footer{
+  background-color: #fff;
+  padding: 1em;
+  text-align: center;
+}
 
-/* not complete yet, not sure which sizes i should be making fonts or if its 
-just by eye, or if i copy base font var(s) above */
-
-/* 400 px */
-@media (min-width: 25em) {
-
- 
+#red-velvet-desc {
+  margin: 0;
 }
 
 
-/* 768   */
-@media (min-width: 48em) {
+@media (min-width: 768px){
+
+  #product-image {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .shot-1 {
+    grid-column: span 1;
+  }
+
+  .product-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  } */
+
+  .quote-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .dough-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
 }
 
 /* 960  */
-@media (min-width: 60em) {
+@media (min-width: 960px) {
+ .flex-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
 
+  h1 {
+    margin-top: 0;
+  }
 }
 
-/* widescreen 1024 */
-@media (min-width: 64em) {
-
-  
-}
